@@ -67,12 +67,11 @@ export default function useWeather() {
       }
       const lat = data[0].lat;
       const lon = data[0].lon;
-      console.log(data);
 
       const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}`;
 
       const { data: weatherResults } = await axios(weatherUrl);
-      console.log(weatherResults);
+
       //   const result = isWeatherReponse(weatherResults); -> TYPE GUARD o ASSERTION
 
       //   const result = Weather.safeParse(weatherResults); -> Con zod
